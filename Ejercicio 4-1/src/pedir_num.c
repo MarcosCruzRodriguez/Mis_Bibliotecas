@@ -10,8 +10,11 @@
 
 int pedirNumero(int* numero)
 {
+	int retorno = 0;
+
 	printf("Ingrese un numero: \n");
 	scanf("%d",numero);
 
-	return 1;
+	retorno = 1;
+	return retorno;
 }
