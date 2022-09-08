@@ -28,11 +28,6 @@ int main(void)
 	{
 		printf("Funciona todo correctamente\n");
 	}
-	else
-	{
-		printf("Algo salio mal, busca el error\n");
-		return 0;
-	}
 
 	while(numeroRetornado > 1)
 	{
