@@ -13,3 +13,6 @@
 #endif /* MENU_MAIN_H_ */
 
 void menuMain(int* eleccion);
+int loguearse(char* user, int* password);
+int compras(int* compra);
+int vender(int* eleccion);
