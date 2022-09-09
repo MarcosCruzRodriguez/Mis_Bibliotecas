@@ -35,5 +35,7 @@ int main(void)
 		printf("La temperatura fue ingresada correctamente\n");
 	}
 
+	conversionTemperatura(tipoTemp, grados);
+
 	return 0;
 }

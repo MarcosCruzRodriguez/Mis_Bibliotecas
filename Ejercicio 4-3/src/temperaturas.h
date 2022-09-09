@@ -12,3 +12,4 @@
 
 int tipoTemperatura(char* tipo);
 int temperatura(char tipo, int* gradosIngresados);
+int conversionTemperatura(int tipo, int gradosIngresados);
