@@ -73,15 +73,15 @@ int main(void)
 				{
 					if(banderaVerCompras == 1)
 					{
-						printf("Usted esta gastando un total de %d\n",acumuladorCompras);
+						printf("Usted esta gastando un total de: %d\n",acumuladorCompras);
 					}
 				}
 				break;
 			case 4:
-				if(banderaLogearse == 1)
+				if(banderaLogearse == 1 && banderaCompras == 1)
 				{
 					errorVentas = vender(&opcionVentas);
-					if(banderaCompras == 1 && errorVentas == 1)
+					if(errorVentas == 1)
 					{
 						switch(opcionVentas)
 						{
@@ -102,6 +102,11 @@ int main(void)
 						}
 					}
 				}
+				else
+				{
+				    printf("No se ha podido ingresar a ventas, \n"
+				            "primero necesita tener una compra hecha \n");
+				}
 				break;
 			case 5:
 				if(banderaLogearse == 1)
@@ -118,6 +123,8 @@ int main(void)
 
 	}
 	while(opcion != 5);
+
+	printf("Usted salio exitosamente del menu MAIN\n");
 
 	return 0;
 }

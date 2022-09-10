@@ -14,5 +14,5 @@
 
 void menuMain(int* eleccion);
 int loguearse(char* user, int* password);
-int compras(int* compra);
+void compras(int* compra);
 int vender(int* eleccion);

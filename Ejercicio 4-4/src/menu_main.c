@@ -45,26 +45,24 @@ int loguearse(char* user, int* password)
 	return retorno;
 }
 
-int compras(int* compra)
+void compras(int* compra)
 {
-	int retorno = 0;
-	int acumuladorCompra = 0;
+	int compraIngresada;
 
 	printf("Ingrese el valor del producto que comprara: \n");
-	scanf("%d",compra);
+	scanf("%d",&compraIngresada);
+	while(compraIngresada < 1)
+    {
+        printf("Reingrese el valor del producto que comprara: \n");
+	    scanf("%d",&compraIngresada);
+    }
 
-	acumuladorCompra += *compra;
-	if(acumuladorCompra != 0)
-	{
-		retorno = 1;
-	}
-	return retorno;
+	*compra += compraIngresada;
 }
 
 int vender(int* eleccion)
 {
 	int retorno = 0;
-	int seguro;
 
 	printf("\nHas ingresado al menu de ventas: \n"
 				"1. Vender \n"
@@ -73,13 +71,6 @@ int vender(int* eleccion)
 	printf("Ingrese una opcion del menu: \n");
 	scanf("%d",eleccion);
 
-	printf("\nEsta seguro de la desicion tomada? Si es asi ingrese s: \n");
-	fflush(stdin);
-	scanf("%d",&seguro);
-	seguro = tolower(seguro);
-	if(seguro == 's')
-	{
-		retorno = 1;
-	}
-	return retorno;
+	 retorno = 1;
+	 return retorno;
 }
